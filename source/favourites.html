@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<include src="source/components/head.html"></include>
+
+<body>
+  <include src="source/components/cursor.html"></include>
+  <include src="source/components/header-white.html"></include>
+  <main class="main-page main-page--white main-page--margin-bottom">
+    <div class="main-page__top">
+      <div class="main-page__container container">
+        <h1 class="main-page__title page-title">Избранное</h1>
+      </div>
+    </div>
+
+    <section class="main-catalog">
+      <div class="main-catalog__container container">
+        <ul class="main-catalog__list">
+          <li class="main-catalog__item card" data-aos="fade">
+            <a href="#" class="card__link">
+              <div class="card__img-wrapper">
+                <img class="card__img" src="img/catalog/catalog-1.png" alt="Продукт">
+                <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+              </div>
+              <div class="card__description">
+                <h3>Свеча Bocal 5 O’Clock at Mad Hatterse</h3>
+                <span>690 &#x20bd;</span>
+              </div>
+            </a>
+            <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+              <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#shopping-bag"/>
+              </svg>
+            </button>
+            <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#heart"/>
+              </svg>
+            </button>
+            <form class="card__form count-form">
+              <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+              <label for="count-form" class="visually-hidden">Количество</label>
+              <input id="count-form" type="text" value="1" name="count-form">
+              <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+            </form>
+          </li>
+          <li class="main-catalog__item card js-opacity" data-aos="fade">
+            <a href="#" class="card__link">
+              <div class="card__img-wrapper">
+                <img class="card__img" src="img/catalog/catalog-2.png" alt="Продукт">
+                <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+              </div>
+              <div class="card__description">
+                <h3>Свеча Verre Arabian Nights</h3>
+                <span>1300 &#x20bd;</span>
+              </div>
+            </a>
+            <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+              <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#shopping-bag"/>
+              </svg>
+            </button>
+            <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#heart"/>
+              </svg>
+            </button>
+            <form class="card__form count-form">
+              <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+              <label for="count-form" class="visually-hidden">Количество</label>
+              <input id="count-form" type="text" value="1" name="count-form">
+              <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+            </form>
+          </li>
+          <li class="main-catalog__item card js-opacity" data-aos="fade">
+            <a href="#" class="card__link">
+              <div class="card__img-wrapper">
+                <img class="card__img" src="img/catalog/catalog-1.png" alt="Продукт">
+                <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+              </div>
+              <div class="card__description">
+                <h3>Свеча Bocal Black Pepper And Pine</h3>
+                <span>600 &#x20bd;</span>
+              </div>
+            </a>
+            <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+              <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#shopping-bag"/>
+              </svg>
+            </button>
+            <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#heart"/>
+              </svg>
+            </button>
+            <form class="card__form count-form">
+              <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+              <label for="count-form" class="visually-hidden">Количество</label>
+              <input id="count-form" type="text" value="1" name="count-form">
+              <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+            </form>
+          </li>
+          <li class="main-catalog__item card js-opacity" data-aos="fade">
+            <a href="#" class="card__link">
+              <div class="card__img-wrapper">
+                <img class="card__img" src="img/catalog/catalog-3.png" alt="Продукт">
+                <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+              </div>
+              <div class="card__description">
+                <h3>Диффузор Peony Bouquet</h3>
+                <span>2100 &#x20bd;</span>
+              </div>
+            </a>
+            <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+              <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#shopping-bag"/>
+              </svg>
+            </button>
+            <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#heart"/>
+              </svg>
+            </button>
+            <form class="card__form count-form">
+              <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+              <label for="count-form" class="visually-hidden">Количество</label>
+              <input id="count-form" type="text" value="1" name="count-form">
+              <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+            </form>
+          </li>
+          <li class="main-catalog__item card js-opacity" data-aos="fade">
+            <a href="#" class="card__link">
+              <div class="card__img-wrapper">
+                <img class="card__img" src="img/product-1_2x.png" alt="Продукт">
+                <img class="card__img-hover card__hover" src="img/product-1-hover_2x.png" alt="Аромат">
+              </div>
+              <div class="card__description">
+                <h3>Свеча Bocal Black Pepper And Pine</h3>
+                <span>600 &#x20bd;</span>
+              </div>
+            </a>
+            <button class="card__cart card__hover" type="button" aria-label="Добавить в корзину">
+              <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#shopping-bag"/>
+              </svg>
+            </button>
+            <button class="card__like card__hover" type="button" aria-label="Добавить в избранное">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#heart"/>
+              </svg>
+            </button>
+            <form class="card__form count-form">
+              <button type="button" class="count-form__btn count-form__btn--minus" aria-label="Минус"></button>
+              <label for="count-form" class="visually-hidden">Количество</label>
+              <input id="count-form" type="text" value="1" name="count-form">
+              <button type="button" class="count-form__btn count-form__btn--plus" aria-label="Плюс"></button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <include src="source/components/footer-fixed.html"></include>
+  <include src="source/components/scripts.html"></include>
+</body>
+
+</html>

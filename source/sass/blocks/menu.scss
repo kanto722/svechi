@@ -1,0 +1,247 @@
+.menu {
+  position: absolute;
+  z-index: -1;
+  top: 80px;
+  width: 100%;
+  opacity: 0;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateY(-100%) translateZ(0) scaleY(0);
+  background-image: linear-gradient($light-grey, $light-grey);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100% 1px;
+  box-shadow: 0 30px 30px rgba(181, 182, 190, 0.16);
+  transition: transform 0.4s 0.1s ease-in-out, opacity 0.2s;
+
+  @media (max-width: $laptop-width) {
+    display: none;
+    background-image: none;
+    box-shadow: none;
+  }
+
+  & .menu__container {
+    opacity: 0;
+    transition: opacity 0.2s 0.4s ease;
+  }
+
+  &.is-show {
+    opacity: 1;
+    transform: translateY(0) translateZ(0) scaleY(1);
+
+    & .menu__container {
+      opacity: 1;
+    }
+  }
+}
+
+.menu__container {
+  position: relative;
+  padding-right: 0;
+  display: flex;
+  min-height: 775px;
+
+  @media (max-width: $desktop-min-width) {
+    min-height: 580px;
+  }
+
+  @media (max-width: 1024px) {
+    min-height: calc(100vh - 80px);
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.menu__list-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  padding-top: 40px;
+  padding-bottom: 14%;
+
+  @media (max-width: $desktop-min-width) {
+    padding-bottom: 96px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.menu__content {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding-top: 60px;
+  padding-bottom: 14%;
+  padding-left: 104px;
+
+  @media (max-width: $desktop-min-width) {
+    padding-bottom: 96px;
+    padding-left: 80px;
+  }
+
+  @media (max-width: 1200px) {
+    padding-left: 40px;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.menu__img {
+  width: 42%;
+  margin-left: auto;
+  overflow: hidden;
+
+  & img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.menu__link {
+  display: block;
+  padding: 4px 0;
+  font-family: 'BlackerProDis-Rg';
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 44px;
+  color: $text;
+  text-decoration: none;
+  transition: color 0.2s, font-size 0.2s;
+
+  @media (max-width: $desktop-min-width) {
+    font-size: 28px;
+    line-height: 41px;
+  }
+
+  @media (max-width: $laptop-width) {
+    padding: 10px 0;
+    margin-bottom: 28px;
+    font-size: 27px;
+    line-height: 32px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  &:hover,
+  &.active {
+    color: $brown;
+  }
+}
+
+.menu__list {
+  @include list-reset;
+  max-width: 312px;
+
+  @media (max-width: $desktop-min-width) {
+    max-width: 240px;
+  }
+
+  &--main {
+    margin-bottom: auto;
+
+    @media (max-width: $laptop-width) {
+      margin-bottom: 0;
+    }
+
+    & .menu__item {
+      display: flex;
+      align-items: center;
+      min-height: 76px;
+      border-bottom: 1px solid $light-grey;
+
+      @media (max-width: $laptop-width) {
+        border-bottom: none;
+      }
+    }
+
+    & .menu__link {
+      &:hover,
+      &.active {
+        font-size: 42px;
+
+        @media (max-width: $desktop-min-width) {
+          font-size: 36px;
+        }
+
+        @media (max-width: $laptop-width) {
+          font-size: 27px;
+        }
+
+        @media (max-width: $mobile-width) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+
+.menu__submenu-list {
+  @include list-reset;
+  display: none;
+  column-count: 2;
+  column-gap: 150px;
+
+  @media (max-width: $desktop-min-width) {
+    column-gap: 75px;
+  }
+
+  @media (max-width: 1200px) {
+    column-gap: 40px;
+  }
+
+  @media (max-width: $laptop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
+.menu__submenu-link {
+  padding: 4px 0;
+  font-size: 16px;
+  line-height: 27px;
+  color: $text;
+  text-decoration: none;
+
+  transition: color 0.2s, font-size 0.2s;
+
+  @media (max-width: $laptop-width) {
+    padding: 10px 0;
+    margin-bottom: 28px;
+    font-size: 27px;
+    line-height: 32px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  &:hover {
+    color: $brown;
+  }
+}
+
+.menu__btn {
+  margin-top: auto;
+  align-self: start;
+}

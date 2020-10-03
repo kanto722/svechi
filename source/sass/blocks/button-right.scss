@@ -1,0 +1,67 @@
+.button-right {
+  display: inline-flex;
+  padding-left: 20px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 27px;
+  text-align: center;
+  align-items: center;
+  color: $brown-dark;
+  border-bottom: 1px solid $dark;
+  transition: all 0.2s;
+
+  @media (max-width: $tablet-width - 1) {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+
+  & img {
+    margin-left: 10px;
+  }
+
+  & .button-right__arrow {
+    stroke: $brown;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $brown;
+  }
+
+  &--dark {
+    color: $dark;
+  }
+
+  &--light {
+    color: $biege;
+    border-color: $biege;
+
+    & svg {
+      margin-left: 10px;
+    }
+
+    & .button-right__arrow {
+      stroke: $biege;
+    }
+
+    &:hover {
+      color: $brown;
+      border-color: $brown;
+
+      & .button-right__arrow {
+        stroke: $brown;
+      }
+    }
+  }
+}
+.button-right:hover {
+  img {
+    transform: translateX(15px);
+    transition: 0.4s;
+    transition-delay:0.5s;
+  }
+}

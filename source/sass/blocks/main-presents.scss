@@ -1,0 +1,141 @@
+.main-presents {
+    padding-top: 240px;
+    padding-bottom: 245px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media(max-width: 1440px) {
+        padding-top: 220px;
+        padding-bottom: 218px;
+        max-width: 690px;
+    }
+
+    @media(max-width: 1023px) {
+        padding-top: 102px;
+        padding-bottom: 150px;
+        max-width: 540px;
+    }
+
+    @media(max-width: 375px) {
+        padding-top: 110px;
+        padding-bottom: 115px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+
+        @media(max-width: 1023px) {
+            line-height: 32px;
+            margin-bottom: 35px;
+        }
+
+        @media(max-width: 375px) {
+            line-height: 34px;
+            margin-bottom: 12px;
+        }
+
+        @media(max-width: 320px) {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+
+    &__description {
+        margin-top: 18px;
+        margin-bottom: 65px;
+        max-width: 600px;
+
+        @media(max-width: 1440px) {
+            margin-top: 40px;
+            max-width: 500px;
+        }
+
+        @media(max-width: 1023px) {
+            font-size: 24px;
+            line-height: 34px;
+            max-width: 450px;
+            margin-top: 25px;
+            margin-bottom: 60px;
+        }
+
+        @media(max-width: 375px) {
+            max-width: 250px;
+            margin-top: 22px;
+            margin-bottom: 40px;
+        }
+
+        @media(max-width: 320px) {
+            margin-top: 0px;
+            font-size: 22px;
+            line-height: 32px;
+            margin-bottom: 32px;
+            max-width: 240px;
+        }
+    }
+
+    &__image-wrapper {
+        width: 416px;
+        height: 488px;
+        position: relative;
+        overflow: hidden;
+        transform: scaleX(0.8);
+        transition: transform 0.3s ease;
+
+
+        @media(max-width: 1440px) {
+            width: 330px;
+            height: 388px;
+        }
+
+        @media(max-width: 1024px) {
+          transform: scaleX(1);
+      }
+
+        @media(max-width: 375px) {
+            width: 214px;
+            height: 252px;
+        }
+
+        &:hover {
+            & img {
+                transition: all 0.4s;
+                transform: scale(1.1) translate(-45%,-45%);
+            }
+        }
+
+        @media(max-width: 1023px) {
+            &:hover {
+                & img {
+                    transition: all 0;
+                    transform: none;
+                }
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.4s;
+
+        @media(max-width: 1440px) {
+            width: 330px;
+            height: 388px;
+        }
+
+        @media(max-width: 1023px) {
+            position: static;
+            width: 100%;
+            height: auto;
+            transform: none;
+        }
+    }
+}

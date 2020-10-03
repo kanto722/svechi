@@ -1,0 +1,74 @@
+<header class="header header--dark">
+  <div class="header__container container">
+      <div class="header__row">
+          <button class="header__burger burger js-open-menu-btn" type="button" aria-label="открыть/закрыть меню">
+              <span></span>
+          </button>
+          <a href="/" class="header__logo" aria-label="логотип">
+              <picture>
+                  <img src="img/white.png" alt="логотип" srcset="img/logo@2x.png 2x" width="80" height="48">
+              </picture>
+          </a>
+      </div>
+      <div class="header__menu">
+          <nav class="header__row">
+              <div class="header__menu-wrapper">
+                  <ul class="header__menu-list header__menu-list--main">
+                      <li class="header__item header__arrow">
+                          <a href="#" data-toggle="site-nav" data-target="#menu-catalog" data-toggle-mobile="mobile-nav" data-target-mobile="#mobile-menu-catalog">Каталог</a>
+                      </li>
+                      <li class="header__item">
+                          <a href="#">Лукбук</a>
+                      </li>
+                      <li class="header__item">
+                          <a href="#">Корпоративные подарки</a>
+                      </li>
+                  </ul>
+                  <ul class="header__menu-list">
+                      <!-- поиск -->
+                      <li class="header__item header__item--search">
+                          <a href="#">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4C7.13401 4 4 7.13401 4 11C4 14.866 7.13401 18 11 18Z" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M19.7501 19.7501L15.9438 15.9438" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <span>Поиск</span>
+                          </a>
+                      </li>
+                      <!-- профиль -->
+                      <li class="header__item">
+                          <a href="#">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M19.5 19.375V17.625C19.5 16.6967 19.1313 15.8065 18.4749 15.1501C17.8185 14.4937 16.9283 14.125 16 14.125H9C8.07174 14.125 7.1815 14.4937 6.52513 15.1501C5.86875 15.8065 5.5 16.6967 5.5 17.625V19.375" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M12.5 10.625C14.433 10.625 16 9.058 16 7.125C16 5.192 14.433 3.625 12.5 3.625C10.567 3.625 9 5.192 9 7.125C9 9.058 10.567 10.625 12.5 10.625Z" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <span>Личный кабинет</span>
+                          </a>
+                      </li>
+                      <!-- лайки -->
+                      <li class="header__item">
+                          <a href="#">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M19.3667 6.03388C18.941 5.58676 18.4357 5.23207 17.8795 4.99008C17.3232 4.74809 16.7271 4.62354 16.125 4.62354C15.5229 4.62354 14.9268 4.74809 14.3705 4.99008C13.8143 5.23207 13.309 5.58676 12.8833 6.03388L12 6.96138L11.1167 6.03388C10.2569 5.13115 9.09086 4.624 7.875 4.624C6.65914 4.624 5.49307 5.13115 4.63333 6.03388C3.77359 6.93661 3.29059 8.16098 3.29059 9.43763C3.29059 10.7143 3.77359 11.9387 4.63333 12.8414L5.51666 13.7689L12 20.5764L18.4833 13.7689L19.3667 12.8414C19.7925 12.3945 20.1303 11.8638 20.3608 11.2798C20.5912 10.6958 20.7099 10.0698 20.7099 9.43763C20.7099 8.80546 20.5912 8.17947 20.3608 7.59545C20.1303 7.01142 19.7925 6.48079 19.3667 6.03388V6.03388Z" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <span>Избранное</span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+               <!-- корзина -->
+              <a class="header__card" href="#">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.03125 3.67725L4.51562 7.03141V18.771C4.51562 19.2158 4.69232 19.6424 5.00683 19.9569C5.32135 20.2714 5.74792 20.4481 6.19271 20.4481H17.9323C18.3771 20.4481 18.8037 20.2714 19.1182 19.9569C19.4327 19.6424 19.6094 19.2158 19.6094 18.771V7.03141L17.0938 3.67725H7.03125Z" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.51562 7.03125H19.6094" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M15.4166 10.3853C15.4166 11.2748 15.0633 12.128 14.4342 12.757C13.8052 13.386 12.9521 13.7394 12.0625 13.7394C11.1729 13.7394 10.3198 13.386 9.69073 12.757C9.0617 12.128 8.70831 11.2748 8.70831 10.3853" stroke="#3A1307" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>1</span>
+              </a>
+
+              <include src="source/components/mobile-menu.html"></include>
+          </nav>
+      </div>
+  </div>
+  <include src="source/components/menu.html"></include>
+</header>

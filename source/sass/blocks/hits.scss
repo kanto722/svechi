@@ -1,0 +1,124 @@
+.hits {
+  padding-top: 144px;
+  padding-bottom: 144px;
+  background-color: $light;
+
+  &--padding {
+    padding-top: 600px;
+  }
+
+  @media (max-width: $desktop-min-width) {
+    padding-top: 126px;
+    padding-bottom: 174px;
+
+    &--padding {
+      padding-top: 600px;
+    }
+  }
+
+  @media (max-width: $laptop-width - 1) {
+    padding-top: 52px;
+    padding-bottom: 132px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    padding-bottom: 80px;
+  }
+}
+
+.hits__container {
+  position: relative;
+  padding: 0;
+}
+
+.hits__title {
+  text-align: center;
+}
+
+.hits__swiper {
+  padding-left: 320px;
+  margin-top: 10px;
+  margin-bottom: 64px;
+
+  & .swiper-button-next,
+  & .swiper-button-prev {
+    display: none;
+  }
+
+  @media (max-width: $desktop-min-width) {
+    padding-left: 103px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $laptop-width - 1) {
+    margin-top: 50px;
+    padding-left: 294px;
+    margin-bottom: 30px;
+
+    & .swiper-button-next,
+    & .swiper-button-prev {
+      position: absolute;
+      top: 44%;
+      z-index: 1000;
+      display: block;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    & .swiper-button-next {
+      right: 54px;
+    }
+
+    & .swiper-button-prev {
+      left: 54px;
+    }
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-top: 37px;
+    padding-left: 45px;
+    margin-bottom: 37px;
+
+    & .swiper-button-next,
+    & .swiper-button-prev {
+      top: 34%;
+    }
+
+    & .swiper-button-next {
+      right: 38px;
+    }
+
+    & .swiper-button-prev {
+      left: 38px;
+    }
+  }
+
+  @media (max-width: $mobile-width - 1) {
+    margin-top: 12px;
+    padding-left: 16px;
+    margin-bottom: 32px;
+
+    & .swiper-button-next {
+      right: 16px;
+    }
+
+    & .swiper-button-prev {
+      left: 16px;
+    }
+  }
+}
+
+.hits__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: $laptop-width) {
+  .hits.js-parallax-hits {
+    padding-top: 300px;
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<include src="source/components/head.html"></include>
+
+<body>
+  <include src="source/components/cursor.html"></include>
+  <div class="js-header-scroll section">
+    <include src="source/components/header.html"></include>
+    <include src="source/components/main-screen.html"></include>
+  </div>
+  <main class="main js-main-scroll section">
+    <include src="source/components/aroma-slider.html"></include>
+    <include src="source/components/category.html"></include>
+    <section class="hits js-parallax-hits">
+      <div class="hits__container container">
+        <h2 class="hits__title section-title">Хиты продаж</h2>
+        <include src="source/components/cards-slider.html"></include>
+        <div class="hits__bottom">
+          <a href="#" class="hits__button button-right">
+            Все хиты
+            <img src="img/sprite/arrow-right.svg" alt="стрелка">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-lookbook">
+      <div class="main-lookbook__text-block">
+        <div class="main-lookbook__content">
+          <h2 class="main-lookbook__title section-title">Продукция с душой и&nbsp;философией отражена в&nbsp;лукбуке</h2>
+          <a href="#" class="main-lookbook__button button-right">
+            Перейти в лукбук
+            <img src="img/sprite/arrow-right.svg" alt="стрелка">
+          </a>
+        </div>
+      </div>
+      <div class="main-lookbook__image-block">
+        <picture>
+          <img src="img/main-lookbook.jpg" alt="диффузор на бежевом фоне" srcset="img/main-lookbook_2x.jpg" width="960" height="1064">
+        </picture>
+      </div>
+    </section>
+      <include src="source/components/manufact.html"></include>
+    <section class="hits hits--padding">
+      <div class="hits__container container">
+        <h2 class="hits__title section-title">Новинки</h2>
+        <include src="source/components/cards-slider.html"></include>
+        <div class="hits__bottom">
+          <a href="#" class="hits__button button-right">
+            Все новинки
+            <img src="img/sprite/arrow-right.svg" alt="стрелка">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-presents js-img-container">
+      <h2 class="main-presents__title section-title">Корпоративные подарки брендированные логотипом компании</h2>
+      <div class="main-presents__image-wrapper js-img-wrap">
+        <picture>
+          <img class="main-presents__image" src="img/main-presents.jpg" alt="свеча на светлом фоне" srcset="img/main-presents_2x.jpg" width="416" height="488">
+        </picture>
+      </div>
+      <p class="main-presents__description section-title">в любой праздник порадуют ваших коллег и партнёров</p>
+      <a class="main-presents__button button-right" href="#">
+        Подробнее
+        <img src="img/sprite/arrow-right.svg" alt="стрелка">
+      </a>
+    </section>
+  </main>
+  <include src="source/components/footer-main-fixed.html"></include>
+  <include src="source/components/scripts.html"></include>
+</body>
+
+</html>

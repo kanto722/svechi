@@ -1,0 +1,47 @@
+html {
+  font-family: $font;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  // outline: 1px solid blue;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 138%;
+  background-color: $back-light;
+  color: $text;
+  font-family: $roboto;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

@@ -1,0 +1,39 @@
+.count-form {
+  display: flex;
+  justify-content: space-between;
+  width: 106px;
+  height: 57px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid $light-grey;
+  border-radius: 49px;
+
+  & input {
+    width: 26px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    outline: none;
+  }
+
+  &__btn {
+    @include btn-reset;
+    cursor: pointer;
+    width: 40px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--minus {
+      background-image: url("../img/sprite/minus.svg");
+    }
+
+    &--plus {
+      background-image: url("../img/sprite/plus.svg");
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

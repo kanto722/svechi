@@ -1,0 +1,232 @@
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 416px;
+  height: 464px;
+  background-color: $light;
+
+  &.swiper-slide {
+    & .card__link {
+      cursor: url(../img/sprite/eyecursor.svg) 14 8.75,auto;
+    }
+  }
+
+  @media (max-width: $desktop-min-width) {
+    width: 408px;
+    height: 447px;
+  }
+
+  @media (max-width: $laptop-width - 1) {
+    width: 324px;
+    height: 362px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 24px;
+    width: 285px;
+    height: 317px;
+  }
+
+  @media (max-width: $mobile-width - 1) {
+    width: 288px;
+    height: 312px;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+
+  &__img-wrapper {
+    max-width: 408px;
+    width: 100%;
+    max-height: 366px;
+    position: relative;
+
+    @media (max-width: $tablet-width) {
+      max-width: 336px;
+      height: 301px;
+    }
+
+    @media (max-width: $mobile-width) {
+      max-width: 312px;
+      height: 280px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__hover {
+    transition: all 0.2s;
+    opacity: 0;
+  }
+
+  &__img-hover {
+    position: absolute;
+    left: -14%;
+    bottom: -14%;
+    width: 248px;
+    height: 226px;
+
+    @media (max-width: $laptop-width) {
+      display: none;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+    padding-bottom: 0px;
+    align-items: center;
+
+    & h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 27px;
+      color: $dark;
+      text-align: center;
+
+      @media (max-width: $laptop-width - 1) {
+        line-height: 26px;
+      }
+
+      @media (max-width: $tablet-width - 1) {
+        line-height: 24px;
+      }
+    }
+
+    & span {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 27px;
+      color: $dark;
+      text-align: center;
+
+      @media (max-width: $laptop-width - 1) {
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+      @media (max-width: $tablet-width - 1) {
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__cart {
+    position: absolute;
+    bottom: 100px;
+    right: 62px;
+    width: 57px;
+    height: 57px;
+    padding: 0;
+    color: $brown-dark;
+    background-color: $white;
+    border: 1px solid #e8e8e8;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    @media (max-width: $laptop-width) {
+      bottom: 116px;
+      right: 40px;
+      opacity: 1;
+    }
+
+    @media (max-width: $tablet-width) {
+      bottom: 111px;
+      right: 31px;
+    }
+
+    @media (max-width: $mobile-width) {
+      bottom: 99px;
+      right: 36px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $text;
+      border: 1px solid $text;
+      color: $white;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  &__form {
+    position: absolute;
+    bottom: 100px;
+    right: 62px;
+    display: none;
+
+    @media (max-width: $laptop-width) {
+      bottom: 116px;
+      right: 40px;
+    }
+
+    @media (max-width: $tablet-width) {
+      bottom: 111px;
+      right: 31px;
+    }
+
+    @media (max-width: $mobile-width - 1) {
+      bottom: 99px;
+      right: 36px;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__like {
+    @include btn-reset;
+    position: absolute;
+    top: 41px;
+    right: 80px;
+    color: $light-grey;
+    cursor: pointer;
+
+    @media (max-width: $laptop-width) {
+      display: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      outline: none;
+      color: $text;
+
+      & svg {
+        fill: $text;
+      }
+    }
+  }
+}
+
+.card:hover {
+  & .card__hover {
+    opacity: 1;
+  }
+}

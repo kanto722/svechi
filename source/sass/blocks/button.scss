@@ -1,0 +1,42 @@
+.button {
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid black;
+
+    &--up {
+        color: $brown;
+        border-color: $brown;
+
+        & img {
+            margin-left: 7px;
+        }
+    }
+
+    &--right {
+      padding-left: 20px;
+      padding-right: 10px;
+      color: $dark;
+      border-bottom: 1px solid $dark;
+
+      & img {
+          margin-left: 10px;
+      }
+    }
+
+    &--brown {
+      color: $brown-dark;
+    }
+
+    &--light {
+      color: $biege;
+      border-color: $biege;
+      & .button-right__arrow {
+        stroke: $biege; 
+      }
+    }
+}

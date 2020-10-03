@@ -1,0 +1,50 @@
+.cursor {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $brown;
+  border-radius: 50%;
+  transition: width 0.2s, height 0.2s;
+
+  &_popup{
+    width: 60px;
+    height: 60px;
+    border: none
+  }
+}
+
+.cursor__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+
+   &--left {
+     left: -20%;
+   }
+
+   &--right {
+    right: -20%;
+  }
+}
+
+.cursor.active {
+  width: 60px;
+  height: 60px;
+  background-color: rgba($color: $white, $alpha: 0.5);
+  border: none;
+
+  & .cursor__arrow {
+    opacity: 1;
+  }
+}
+
+.js-slider {
+  cursor: url(../img/sprite/eyecursor.svg) 14 8.75,auto;
+}
+

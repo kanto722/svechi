@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<include src="source/components/head.html"></include>
+
+<body>
+  <include src="source/components/cursor.html"></include>
+  <include src="source/components/header-white.html"></include>
+  <main class="main-page main-page--white main-page--margin-bottom">
+    <div class="main-page__top">
+      <div class="main-page__container container">
+        <h1 class="main-page__title page-title">Каталог</h1>
+      </div>
+    </div>
+
+    <section class="catalog-filter">
+      <div class="catalog-filter__top">
+        <div class="catalog-filter__container container">
+          <ul class="catalog-filter__option-list">
+            <li class="catalog-filter__option-item">
+              <span class="catalog-filter__number">1</span>
+              <a href="#" class="catalog-filter__option-link" data-toggle="catalog-tabs" data-target="#products-target">Продукция</a>
+            </li>
+            <li class="catalog-filter__option-item">
+              <a href="#" class="catalog-filter__option-link" data-toggle="catalog-tabs" data-target="#aroma-target">Аромат</a>
+            </li>
+            <li class="catalog-filter__option-item">
+              <span class="catalog-filter__number">3</span>
+              <a href="#" class="catalog-filter__option-link" data-toggle="catalog-tabs" data-target="#mood-target">Настроение</a>
+            </li>
+            <li class="catalog-filter__option-item">
+              <a href="#" class="catalog-filter__option-link" data-toggle="catalog-tabs" data-target="#time-target">Время использования</a>
+            </li>
+            <li class="catalog-filter__option-item">
+              <a href="#" class="catalog-filter__option-link" data-toggle="catalog-tabs" data-target="#sort-target">По популярности</a>
+            </li>
+          </ul>
+          <button type="button" class="catalog-filter__button catalog-filter__button--desktop">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#close"/>
+            </svg>
+            Очистить
+          </button>
+          <div class="catalog-filter__mobile-top">
+            <button type="button" class="catalog-filter__button catalog-filter__button--filter js-filter-open">
+              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#i-filter"/>
+              </svg>
+              Фильтрация
+            </button>
+            <button type="button" class="catalog-filter__button catalog-filter__button--filter-close js-filter-close" aria-label="закрыть">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#cross"/>
+              </svg>
+            </button>
+            <div class="catalog-filter__option-item catalog-filter__option-item--mobile catalog-filter__option-item--mobile-sort">
+              <a href="#" class="catalog-filter__option-link" data-toggle="catalog-tabs-mobile" data-target="#sort-target-mobile">По популярности</a>
+            </div>
+            <div class="catalog-filter__dropdown-container catalog-filter__dropdown-container--sort-mobile container" id="sort-target-mobile" data-content="catalog-content">
+              <form action="#" class="catalog-filter__form js-sort-form-mobile">
+                <ul class="catalog-filter__value-list">
+                  <li class="catalog-filter__value-item">
+                    <input type="radio" name="sort" id="sort-1">
+                    <label for="sort-1">По новизне</label>
+                  </li>
+                  <li class="catalog-filter__value-item">
+                    <input type="radio" name="sort" id="sort-2" checked>
+                    <label for="sort-2">По популярности</label>
+                  </li>
+                  <li class="catalog-filter__value-item">
+                    <input type="radio" name="sort" id="sort-3">
+                    <label for="sort-3">По возрастанию цены</label>
+                  </li>
+                  <li class="catalog-filter__value-item">
+                    <input type="radio" name="sort" id="sort-4">
+                    <label for="sort-4">По убыванию цены</label>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="catalog-filter__dropdown">
+        <div class="catalog-filter__dropdown-container container" id="products-target" data-content="catalog-content">
+          <div class="catalog-filter__option-item catalog-filter__option-item--mobile">
+            <span class="catalog-filter__number">1</span>
+            <a href="#" class="catalog-filter__option-link" data-toggle="catalog-tabs-mobile" data-target="#products-target">Продукция</a>
+          </div>
+          <form action="#" class="catalog-filter__form">
+            <ul class="catalog-filter__value-list">
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="product" id="product-1">
+                <label for="product-1">Свечи серии Bocal</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="product" id="product-2">
+                <label for="product-2">Свечи серии Verre</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="product" id="product-3">
+                <label for="product-3">Свечи серии Chakras</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="product" id="product-4">
+                <label for="product-4">Свечи серии Spa</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="product" id="product-5">
+                <label for="product-5">Свечи серии Votiv</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="product" id="product-6">
+                <label for="product-6">Все свечи</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="product" id="product-7">
+                <label for="product-7">Диффузеры</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="product" id="product-8">
+                <label for="product-8">Парфюм</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="product" id="product-9">
+                <label for="product-9">Автопарфюм</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="product" id="product-10">
+                <label for="product-10">Тарталетки</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="product" id="product-11">
+                <label for="product-11">Бомбочки для ванн</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="product" id="product-12">
+                <label for="product-12">Аксессуары</label>
+              </li>
+            </ul>
+          </form>
+        </div>
+
+        <div class="catalog-filter__dropdown-container container" id="mood-target" data-content="catalog-content">
+          <div class="catalog-filter__option-item catalog-filter__option-item--mobile">
+            <span class="catalog-filter__number">3</span>
+            <a href="#" class="catalog-filter__option-link" data-toggle="catalog-tabs-mobile" data-target="#mood-target">Настроение</a>
+          </div>
+          <form action="#" class="catalog-filter__form">
+            <ul class="catalog-filter__value-list">
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="mood" id="mood-1">
+                <label for="mood-1">Уют</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="mood" id="mood-2">
+                <label for="mood-2">Энергия</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="mood" id="mood-3">
+                <label for="mood-3">Романтика</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="mood" id="mood-4">
+                <label for="mood-4">Релаксация</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="mood" id="mood-5">
+                <label for="mood-5">Праздник</label>
+              </li>
+            </ul>
+          </form>
+        </div>
+
+        <div class="catalog-filter__dropdown-container container" id="aroma-target" data-content="catalog-content">
+          <div class="catalog-filter__option-item catalog-filter__option-item--mobile">
+            <a href="#" class="catalog-filter__option-link" data-toggle="catalog-tabs-mobile" data-target="#aroma-target">Аромат</a>
+          </div>
+          <form action="#" class="catalog-filter__form">
+            <ul class="catalog-filter__value-list">
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="aroma" id="aroma-1">
+                <label for="aroma-1">Гурманский</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="aroma" id="aroma-2">
+                <label for="aroma-2">Древесный</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="aroma" id="aroma-3">
+                <label for="aroma-3">Травяной</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="aroma" id="aroma-4">
+                <label for="aroma-4">Фруктовый</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="aroma" id="aroma-5">
+                <label for="aroma-5">Цветочный</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="aroma" id="aroma-6">
+                <label for="aroma-6">Свежий</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="aroma" id="aroma-7">
+                <label for="aroma-7">Пряный</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="aroma" id="aroma-8">
+                <label for="aroma-8">Мужской</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="aroma" id="aroma-9">
+                <label for="aroma-9">Афродизиак</label>
+              </li>
+            </ul>
+          </form>
+        </div>
+
+        <div class="catalog-filter__dropdown-container container" id="time-target" data-content="catalog-content">
+          <div class="catalog-filter__option-item catalog-filter__option-item--mobile">
+            <a href="#" class="catalog-filter__option-link" data-toggle="catalog-tabs-mobile" data-target="#time-target">Время использования</a>
+          </div>
+          <form action="#" class="catalog-filter__form">
+            <ul class="catalog-filter__value-list">
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="time" id="time-1">
+                <label for="time-1">15+ часов</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="time" id="time-2">
+                <label for="time-2">25+ часов</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="time" id="time-3">
+                <label for="timet-3">40+ часов</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="time" id="time-4">
+                <label for="time-4">50+ часов</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="checkbox" name="time" id="time-5">
+                <label for="time-5">100+ часов</label>
+              </li>
+            </ul>
+          </form>
+        </div>
+
+        <div class="catalog-filter__dropdown-container catalog-filter__dropdown-container--sort container" id="sort-target" data-content="catalog-content">
+          <form action="#" class="catalog-filter__form js-sort-form">
+            <ul class="catalog-filter__value-list">
+              <li class="catalog-filter__value-item">
+                <input type="radio" name="sort-desk" id="sort-desk-1">
+                <label for="sort-desk-1">По новизне</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="radio" name="sort-desk" id="sort-desk-2" checked>
+                <label for="sort-desk-2">По популярности</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="radio" name="sort-desk" id="sort-desk-3">
+                <label for="sort-desk-3">По возрастанию цены</label>
+              </li>
+              <li class="catalog-filter__value-item">
+                <input type="radio" name="sort-desk" id="sort-desk-4">
+                <label for="sort-desk-4">По убыванию цены</label>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div class="catalog-filter__dropdown-container container">
+          <div class="catalog-filter__option-item catalog-filter__option-item--mobile">
+            <button type="button" class="catalog-filter__button catalog-filter__button--mobile">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#close"/>
+              </svg>
+              Очистить
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-catalog">
+      <div class="main-catalog__container container">
+        <ul class="main-catalog__list">
+          <li class="main-catalog__item card" data-aos="fade">
+            <include src="source/components/catalog-item.html"></include>
+          </li>
+          <li class="main-catalog__item card js-opacity" data-aos="fade">
+            <include src="source/components/catalog-item.html"></include>
+          </li>
+          <li class="main-catalog__item card js-opacity" data-aos="fade">
+            <include src="source/components/catalog-item.html"></include>
+          </li>
+          <li class="main-catalog__item card js-opacity" data-aos="fade">
+            <include src="source/components/catalog-item.html"></include>
+          </li>
+          <li class="main-catalog__item card js-opacity" data-aos="fade">
+            <include src="source/components/catalog-item.html"></include>
+          </li>
+          <li class="main-catalog__item card js-opacity" data-aos="fade">
+            <include src="source/components/catalog-item.html"></include>
+          </li>
+          <li class="main-catalog__item card js-opacity" data-aos="fade">
+            <include src="source/components/catalog-item.html"></include>
+          </li>
+          <li class="main-catalog__item card js-opacity" data-aos="fade">
+            <include src="source/components/catalog-item.html"></include>
+          </li>
+          <li class="main-catalog__item card js-opacity" data-aos="fade">
+            <include src="source/components/catalog-item.html"></include>
+          </li>
+        </ul>
+        <a href="#" class="main-catalog__button button-right">
+          Показать больше
+          <img src="img/sprite/arrow-right.svg" alt="стрелка">
+        </a>
+      </div>
+    </section>
+  </main>
+  <include src="source/components/footer-fixed.html"></include>
+  <include src="source/components/scripts.html"></include>
+</body>
+
+</html>

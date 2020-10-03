@@ -1,0 +1,10 @@
+.main {
+  margin-top: 100vh;
+  margin-bottom: 100vh;
+  z-index: 1;
+  background-color: $back-light;
+
+  @media (max-width: $laptop-width) {
+    margin: 0;
+  }
+}
