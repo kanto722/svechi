@@ -6,7 +6,7 @@
   bottom: 0;
   left: 0;
   z-index: 999;
-  display: none;
+  // display: none;
   transition: background-color 250ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
 
   &_open{
