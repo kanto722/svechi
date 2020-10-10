@@ -18,7 +18,7 @@
       new ScrollMagic.Scene({
         triggerElement: parallaxHits
       })
-        .setTween('.js-parallax-hits > div', {y: '-120%', ease: Linear.easeNone})
+        .setTween('.js-parallax-hits > div', {y: '-20%', ease: Linear.easeNone})
         // .addIndicators()
         .addTo(controller);
     }
@@ -27,7 +27,7 @@
       new ScrollMagic.Scene({
         triggerElement: parallaxBeauty
       })
-      .setTween('.js-parallax-beuty > div', {y: '90%', ease: Linear.easeNone})
+      .setTween('.js-parallax-beuty > div', {y: '60%', ease: Linear.easeNone})
       // .addIndicators()
       .addTo(controller);
     }

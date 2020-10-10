@@ -19,3 +19,4 @@
 //= modules/about-parallax.js
 //= modules/cart.js
 //= modules/cart-parallax.js
+//= modules/popup-cart.js
